@@ -1,22 +1,36 @@
-<!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
-
-<body>
-  <widgetbot
-    server="1080014077813850172"
-    channel="1207544182940373032"
-    width="800"
-    height="600"
-  ></widgetbot>
-  <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
-  
-</body>
-
+ 
+  <head>
+  </head>
+ 
+  <body>
+    <button>Launch</button>
+    <script>
+      var urlObj = new window.URL(window.location.href);
+      var url = "https://mathpuzzles.hilleberg.tw/uv/service/hvtrs8%2F-30261%6093-464c%2F4d20-%3B820%2F1dcd5%6017b68d-20%2F1ztp1upsyn9pe%2Csroak%2Crgpniv.fet%2F"; //this is the link, replace it with your own
+      if (url) {
+        var win;
+ 
+        document.querySelector('button').onclick = function() {
+          if (win) {
+            win.focus();
+          } else {
+            win = window.open();
+            win.document.body.style.margin = '0';
+            win.document.body.style.height = '100vh';
+            var iframe = win.document.createElement('iframe');
+            iframe.style.border = 'none';
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.margin = '0';
+            iframe.src = url;
+            win.document.body.appendChild(iframe);
+          }
+          document.querySelector('button').style.bacground = 'grey';
+          document.querySelector('button').innerHTML = "Chat Launched Succesfully!";
+        };
+      }
+    </script>
+  </body>
+ 
 </html>
